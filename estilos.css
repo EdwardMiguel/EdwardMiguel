@@ -1,0 +1,17 @@
+#main-container{
+    width: 280px;
+    margin: 0 auto;
+    padding-top:150px;
+   }
+   #main-container img {
+    border: 5px solid#eee;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+   }
+   #main-container  img:hover {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+   }
