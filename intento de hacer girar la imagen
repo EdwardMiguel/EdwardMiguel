@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>DOM</title>
+</head>
+<body>
+    <div class="main-container">
+         <div class="cover">
+             <img src="imagen.jpg" alt="cover">
+    </div>
+   <div class="controls">
+       <button id="play-btn">Play</button>
+       <button id="pause-btn">Pausa</button>
+   </div>
+</div>
+
+
+<audio id="cancion"  src="cancion.mp3"></audio>
+
+
+<script src="java.js"></script>
+
+</body>
+</html>
+
+HTML
+
+let cancion = document.getElementById("cancion");
+let play_btn = document.getElementById("play-btn");
+let pause_btn = document.getElementById("pause-btn");
+let cover = document.getElementById("cover");
+
+play_btn.addEventListener("click", () => {
+    cancion.play();
+    cover.style.animationPlayState = "running";
+});
+
+pause_btn.addEventListener("click", () => {
+    cancion.pause();
+    cover.style.animationPlayState = "paused";
+});
+
+JAVA SCRIPT
+
+#main-container{
+    width: 280px;
+    margin: 0 auto;
+    padding-top:150px;
+   }
+   #main-container img {
+    border: 5px solid#eee;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+   }
+   #main-container  img:hover {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+   }
+   
+   CSS
